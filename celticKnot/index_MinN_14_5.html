@@ -1,0 +1,28 @@
+
+// START MinN 14
+
+//Turn transparency on
+const A = [280, 450];
+const B = [350, 550];
+const C = [200, 650];
+const D = [130, 550];
+
+
+// / top
+ctx.beginPath();
+ctx.moveTo(...A);
+ctx.lineTo(...D);
+// / bottom
+ctx.moveTo(...B);
+ctx.lineTo(...C);
+// \ right
+ctx.moveTo(...A);
+ctx.lineTo(...B);
+// / left
+ctx.moveTo(...D);
+ctx.lineTo(...C);
+
+// ctx.fillStyle = "#787274";
+//ctx.strokeStyle = "red";
+
+ctx.stroke();

@@ -1,0 +1,46 @@
+
+// START SimR 4-5-14
+
+//ctx.fillStyle = "#888888"; //8's is gray
+ctx.strokeStyle = "#2c5e86";
+//ctx.fillRect(20, 20, 75, 50);
+
+//Turn transparency on - default website code
+ctx.globalAlpha = 1;
+//ctx.fillStyle = "blue"; 
+//ctx.fillRect(50, 50, 75, 50); 
+//ctx.fillStyle = "green"; 
+//ctx.fillRect(80, 80, 75, 50);
+ctx.lineWidth = 11;
+
+ctx.beginPath();
+//(x,y)
+ctx.moveTo(115,532);// the bottom left line
+ctx.lineTo(169,607);
+
+ctx.moveTo(120,528); // the bottom left (top) line
+ctx.lineTo(177,605); 
+
+ctx.moveTo(125,525); // connects bottomL top line
+ctx.lineTo(115,532);
+
+ctx.lineTo(169,607); // connects bottomL bot line
+ctx.lineTo(180,600); 
+
+
+
+// Other top right box
+//difference is +40y-axis or -70x-axis
+ctx.moveTo(185,492);// the bottom left line
+ctx.lineTo(239,567);
+
+ctx.moveTo(190,488); // the bottom left (top) line
+ctx.lineTo(247,565); 
+
+ctx.moveTo(195,485); // connects bottomL top line
+ctx.lineTo(185,492);
+
+ctx.lineTo(239,567); // connects bottomL bot line
+ctx.lineTo(250,560);
+
+ctx.stroke();

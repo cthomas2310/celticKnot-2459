@@ -1,0 +1,36 @@
+
+// START SpaS 5-6-7
+
+gradient = ctx.createLinearGradient(50, 285, 187*.2, 450);
+gradient.addColorStop(0, "#3d414c");
+gradient.addColorStop(.5, "#b89289");
+gradient.addColorStop(1, "#a9504a");
+ctx.beginPath();
+ctx.moveTo(100, 560);
+ctx.lineTo(165, 540);
+ctx.moveTo(100, 560);
+ctx.lineTo(165, 675);
+ctx.quadraticCurveTo(200, 700, 260, 650);
+ctx.moveTo(165, 540);
+ctx.lineTo(200, 565);
+ctx.quadraticCurveTo(220, 580, 250, 600);
+ctx.lineTo(260, 650);
+ctx.moveTo(250, 600);
+ctx.lineTo(240, 580);
+ctx.lineTo(285, 565);
+ctx.lineTo(325, 625);
+ctx.quadraticCurveTo(340, 635, 340, 615);
+ctx.lineTo(400, 575);
+ctx.lineTo(430, 600);
+ctx.lineTo(430, 700);
+ctx.lineTo(280, 700);
+ctx.lineTo(260, 650);
+ctx.moveTo(320, 615);
+ctx.lineTo(410, 570);
+ctx.quadraticCurveTo(430, 500, 380, 460); 
+ctx.lineTo(340, 480);
+ctx.lineTo(350, 515);
+ctx.lineTo(300, 585);
+ctx.fillStyle = gradient; 
+ctx.fill();
+ctx.stroke();

@@ -1,9 +1,20 @@
 <!DOCTYPE html> 
 <html>
 <body>
-
     <canvas id="myCanvas" width="500px" height="700px" style="border:1px red"> </canvas>
-   
+    
     <script>
-      
+      const c = document.getElementById("myCanvas");
+      const ctx = c.getContext("2d");
+      var background = new Image();
+      background.src = "IMG_4031_grid.jpg";
+      var canvas_width = 500;
+      var canvas_height = 700;
+      background.onload = function(){
+        ctx.globalAlpha = 0.4;
+        ctx.drawImage(background, 0, 0, canvas_width, background.height * canvas_width / background.width);
+        ctx.globalAlpha = 1.0;
+      }
+
+
   //end header

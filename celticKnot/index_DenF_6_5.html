@@ -1,0 +1,29 @@
+
+// START DenF 6
+
+ctx.strokeStyle = "black";
+ctx.lineWidth = 1.5;
+
+gradient = ctx.createLinearGradient(340, 535, 472, 600);
+gradient.addColorStop(0, '#78715f');
+gradient.addColorStop(1, '#bcac6b');
+
+ctx.beginPath();
+ctx.moveTo(400,580);
+ctx.lineTo(450,520);
+ctx.lineTo(470,540);
+ctx.lineTo(472,545);
+ctx.lineTo(472,555);
+ctx.lineTo(472,650);
+ctx.lineTo(375, 650);
+ctx.lineTo(300, 575);
+ctx.lineTo(340, 535);
+ctx.lineTo(400, 590);
+ctx.lineTo(405,590);
+ctx.lineTo(405,585);
+ctx.lineTo(400,580);
+
+ctx.fillStyle = gradient;
+ctx.closePath();
+ctx.fill();
+ctx.stroke();

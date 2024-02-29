@@ -1,32 +1,218 @@
 <!DOCTYPE html> 
 <html>
 <body>
-
     <canvas id="myCanvas" width="500px" height="700px" style="border:1px red"> </canvas>
-   
-    <script>
-      
-  //end header
-    const c = document.getElementById("myCanvas");
-    const ctx = c.getContext("2d");
-
-    const x = 250;
-    const y = 600;
-    const offset = 15;
-    var radius = Math.sqrt(2 * Math.pow(offset, 2));
-
-    ctx.fillStyle = "#888888";
-    ctx.strokeStyle = "red";
     
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(x + offset, y + offset);
-    ctx.moveTo(x, y);
-    ctx.lineTo(x - offset, y + offset);
-    ctx.moveTo(x, y);
-    ctx.arc(x, y, radius, 0.75*Math.PI, 0.25*Math.PI, true);
-    ctx.stroke();
-  //start footer  
+    <script>
+      const c = document.getElementById("myCanvas");
+      const ctx = c.getContext("2d");
+      var background = new Image();
+      background.src = "IMG_4031_grid.jpg";
+      var canvas_width = 500;
+      var canvas_height = 700;
+      background.onload = function(){
+        ctx.globalAlpha = 0.4;
+        ctx.drawImage(background, 0, 0, canvas_width, background.height * canvas_width / background.width);
+        ctx.globalAlpha = 1.0;
+      }
+
+
+  //end header
+
+// START ChrT E
+
+x = 245;
+y = 545;
+offset = 10;
+radius = Math.sqrt(2 * Math.pow(offset, 2));
+
+ctx.fillStyle = "#888888";
+ctx.strokeStyle = "red";
+
+ctx.beginPath();
+ctx.moveTo(x, y);
+ctx.lineTo(x + offset, y + offset);
+ctx.moveTo(x, y);
+ctx.lineTo(x - offset, y + offset);
+ctx.moveTo(x, y);
+ctx.arc(x, y, radius, 0.75*Math.PI, 0.25*Math.PI, true);
+ctx.stroke();
+
+// START DenF 6
+
+ctx.strokeStyle = "black";
+ctx.lineWidth = 1.5;
+
+gradient = ctx.createLinearGradient(340, 535, 472, 600);
+gradient.addColorStop(0, '#78715f');
+gradient.addColorStop(1, '#bcac6b');
+
+ctx.beginPath();
+ctx.moveTo(400,580);
+ctx.lineTo(450,520);
+ctx.lineTo(470,540);
+ctx.lineTo(472,545);
+ctx.lineTo(472,555);
+ctx.lineTo(472,650);
+ctx.lineTo(375, 650);
+ctx.lineTo(300, 575);
+ctx.lineTo(340, 535);
+ctx.lineTo(400, 590);
+ctx.lineTo(405,590);
+ctx.lineTo(405,585);
+ctx.lineTo(400,580);
+
+ctx.fillStyle = gradient;
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+// START MinN 14
+
+//Turn transparency on
+const A = [280, 450];
+const B = [350, 550];
+const C = [200, 650];
+const D = [130, 550];
+
+
+// / top
+ctx.beginPath();
+ctx.moveTo(...A);
+ctx.lineTo(...D);
+// / bottom
+ctx.moveTo(...B);
+ctx.lineTo(...C);
+// \ right
+ctx.moveTo(...A);
+ctx.lineTo(...B);
+// / left
+ctx.moveTo(...D);
+ctx.lineTo(...C);
+
+// ctx.fillStyle = "#787274";
+//ctx.strokeStyle = "red";
+
+ctx.stroke();
+
+// START ChaS 5
+
+//color
+ctx.fillStyle = "#888888";
+ctx.strokeStyle = "red";
+
+ctx.beginPath();
+
+//first line
+ctx.moveTo(20,300);// first line near 4
+ctx.lineTo(70,250);
+
+ctx.moveTo(20,300);// line on the side near D
+ctx.lineTo(120,450);
+
+ctx.moveTo(120,450);
+ctx.lineTo(180,490);
+
+ctx.moveTo(180,490);
+ctx.lineTo(230,485);
+
+ctx.moveTo(230,485);
+ctx.lineTo(280,450);
+
+ctx.moveTo(70,250);// line between N to E
+ctx.lineTo(180,380);
+
+ctx.moveTo(180,380);
+ctx.lineTo(200,390);
+
+ctx.moveTo(200,390);
+ctx.lineTo(230,380);
+
+ctx.moveTo(230,380);// finish line near 6
+ctx.lineTo(280,450);
+
+ctx.stroke();
+// START SimR 4-5-14
+
+//ctx.fillStyle = "#888888"; //8's is gray
+ctx.strokeStyle = "#2c5e86";
+//ctx.fillRect(20, 20, 75, 50);
+
+//Turn transparency on - default website code
+ctx.globalAlpha = 1;
+//ctx.fillStyle = "blue"; 
+//ctx.fillRect(50, 50, 75, 50); 
+//ctx.fillStyle = "green"; 
+//ctx.fillRect(80, 80, 75, 50);
+ctx.lineWidth = 11;
+
+ctx.beginPath();
+//(x,y)
+ctx.moveTo(115,532);// the bottom left line
+ctx.lineTo(169,607);
+
+ctx.moveTo(120,528); // the bottom left (top) line
+ctx.lineTo(177,605); 
+
+ctx.moveTo(125,525); // connects bottomL top line
+ctx.lineTo(115,532);
+
+ctx.lineTo(169,607); // connects bottomL bot line
+ctx.lineTo(180,600); 
+
+
+
+// Other top right box
+//difference is +40y-axis or -70x-axis
+ctx.moveTo(185,492);// the bottom left line
+ctx.lineTo(239,567);
+
+ctx.moveTo(190,488); // the bottom left (top) line
+ctx.lineTo(247,565); 
+
+ctx.moveTo(195,485); // connects bottomL top line
+ctx.lineTo(185,492);
+
+ctx.lineTo(239,567); // connects bottomL bot line
+ctx.lineTo(250,560);
+
+ctx.stroke();
+
+// START SpaS 5-6-7
+
+gradient = ctx.createLinearGradient(50, 285, 187*.2, 450);
+gradient.addColorStop(0, "#3d414c");
+gradient.addColorStop(.5, "#b89289");
+gradient.addColorStop(1, "#a9504a");
+ctx.beginPath();
+ctx.moveTo(100, 560);
+ctx.lineTo(165, 540);
+ctx.moveTo(100, 560);
+ctx.lineTo(165, 675);
+ctx.quadraticCurveTo(200, 700, 260, 650);
+ctx.moveTo(165, 540);
+ctx.lineTo(200, 565);
+ctx.quadraticCurveTo(220, 580, 250, 600);
+ctx.lineTo(260, 650);
+ctx.moveTo(250, 600);
+ctx.lineTo(240, 580);
+ctx.lineTo(285, 565);
+ctx.lineTo(325, 625);
+ctx.quadraticCurveTo(340, 635, 340, 615);
+ctx.lineTo(400, 575);
+ctx.lineTo(430, 600);
+ctx.lineTo(430, 700);
+ctx.lineTo(280, 700);
+ctx.lineTo(260, 650);
+ctx.moveTo(320, 615);
+ctx.lineTo(410, 570);
+ctx.quadraticCurveTo(430, 500, 380, 460); 
+ctx.lineTo(340, 480);
+ctx.lineTo(350, 515);
+ctx.lineTo(300, 585);
+ctx.fillStyle = gradient; 
+ctx.fill();
+ctx.stroke();  //start footer  
   </script>
 
 
